@@ -1,16 +1,18 @@
 public class Baslangic {
     public static void main(String[] args) {
-        Sinif sinif = new Sinif();
-        Sinif audi = new Sinif();
-        audi.speed = 10;
-        System.out.println("Audi Hızı : " + audi.speed);
+        Sinif audi = new Sinif("Sports", "Audi", "red");
+        audi.increaseSpeed(20);
+        audi.printInfo();
 
-        Sinif bmw = new Sinif();
-        bmw.speed = 25;
-        System.out.println("Bmw Hızı : " + bmw.speed);
+        Sinif bmw = new Sinif("Sports" , "BMW" , "blue");
+        bmw.increaseSpeed(10);
+        bmw.increaseSpeed(25);
+        bmw.increaseSpeed(5);
+        bmw.decreaseSpeed(25);
+        bmw.printInfo();
 
-        Sinif mercedes = new Sinif();
-        mercedes.speed = 30;
-        System.out.println("Mercedes Hızı : " + mercedes.speed);
+        Sinif mercedes = new Sinif("Corporate" , "Mercedes" , "black");
+        mercedes.speed = 20;
+        mercedes.printInfo();
     }
 }
